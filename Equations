@@ -1,0 +1,13 @@
+Joshua Haynes copyright 2017
+Target (1)
+Actual (2)
+Desired (3)
+X=
+Y=
+Z=
+If X2 (not=to) X1 then
+X2/Y1=Z2 ; Zn(Z1-Z2) ; Z3(Z1+Zn) ; Z4(Z1+(Zn/2))
+X3(Z4*Y1) ; X4(zXZ3*Y1) if ZN unknown for expectedX<TargetX zn is positive number; if expectedX>TargetX Zn return a negative number This can also be readjusted for which object is being searched for or layout and template offsets with the appropriate code as it allows creation of all new objects in an updated template with an equal reference xy to the original template
+Return(X3;Z3)
+X3 ; Z3>Target
+X3 ; Z3=Target
