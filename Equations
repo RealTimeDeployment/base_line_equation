@@ -1,16 +1,17 @@
-Joshua Haynes copyright 2017; All rights reserved; Distributed for private use under the Apache 2 license agreement. Amy commercial use for profit requires direct agreement for use and distributiondistribution for any partial or complete use of equation
-When two components are proportionally equal and one component is inverse and proportional inversely equal to the other two components
+Joshua Haynes copyright 2017
+When weighted members are greater than expected and actual X is not equal to target X
 Target (1)
 Actual (2)
 Desired (3)
-X="proportional"
-Y="proportional"
-Z="Inverse"
-X2not=X1
-Z2(X2/Y1) ; Zn(Z1-Z2) ; Z3(Z1+Zn) ; Z4(Z1+(Zn/2))
-X3(Z4*Y1) ; X4(Z3*Y1) *if ZN unknown for expectedX<TargetX zn is positive number; if expectedX>TargetX Zn return a negative number This can also be readjusted for which object is being searched for or layout and template offsets with the appropriate code as it allows creation of all new objects in an updated template with an equal reference xy to the original template
-Return(X3;Z3)
-X3 or X4 ; Z3>Target
-X3 ; Z3=Target *use X3 with coeffecients with power of one
-X4 ; Z3=Target *use x4 for coeffecients with power of two
-*Zn is the unknown difference of the Z component when weighted members are not same as exspected
+X proportional equal to y
+Y proportional equal to x
+Z Inverse to x
+X2 not=X1
+Z2(X2/Y1) ; Zn(Z1-Z2) ; Z3(Z1+Zn) ; Z4(Z1+(Zn/2)) \\ adjustable weighted members
+X3(Z3*Y1) ; X4(Z4*Y1) *if ZN unknown for expectedX<TargetX zn is positive number; if expectedX>TargetX Zn returns a negative number
+logY(X3\Z3) ; Y3(X4\Z3) depending on (logy xx\z) ; (xx\z yy\z)= proportional xy
+Return(X3,X4;Z3)
+( X3 ; X4 ); Z3>Target
+X3 ; Z3=Target *use X3 logY
+X4 ; Z3=Target *use x4 for coeffecients with power of two and z power of one
+*Zn is the unknown difference of the Z component when weighted members are not same as expected
