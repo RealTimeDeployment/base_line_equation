@@ -7,10 +7,10 @@ X proportional equal to y
 Y proportional equal to x
 Z Inverse to x
 X2 not=X1 ; Y1(X1/Z1)*do not use 0.0-9.0 Use ohms law 
-Z2(X2/Y1) ; Zn(Z1-Z2)*difference ; Z3(Z1+Zn) *corrected; Z4(Z1+(Zn/2))*corrected \\ adjusted weighted members
+Z2(X2/Y1) ; R0(Z1-Z2)*difference ; Z3(Z1+R0) *corrected; Z4(Z1+(R0/2))*corrected \\ adjusted weighted members
 X3(Z3*Y1) ; X4(Z4*Y1) *if ZN unknown for expectedX<TargetX zn is positive number; if expectedX>TargetX Zn returns a negative number
-Return (X4 ; Z3) new view for baseline Y3(X4/Z3) *X4,Y3,Z3 give us our baseline corrected overview proportional equal to original view, correcting for the original weighted members beimg set incorrectly for the current condition of actual device.
-(X4;Z3) = new corrected view for maintenance to know what values are correct only *do not use as new target or allow orginal target to change. Without limits to when calls are made and when adjustments are allowed will cause undesired behaviour as heat loss will cause new view to become >plane-1 Reason for execution is actual has become < plane-1
+X4 ; Z3 new view for baseline, Y3(X4/Z3) *X4,Y3,Z3 give us our baseline corrected overview proportional equal to original view, correcting for the original weighted members beimg set incorrectly for the current condition of actual device.
+X4;Z3 = new corrected view for maintenance to know what values are correct only *do not use as new target or allow orginal target to change. Without limits to when calls are made and when adjustments are allowed will cause undesired behaviour as heat loss will cause new view to become >plane-1 Reason for execution is actual has become < plane-1
 X3 ; Z3=  *use X3 for logY only when amps is required to remain static for finding pool_available<needed for logY this will increase X causing increase to watts and unequal xy this shpuld not be used with integration as it will cause errors use this for physics only as when used for continuous it will cause Z member to repeatedly rise on each added layer due to adjustment executing against heat loss
 X4 ; Z3=Target *use x4 for coefficients with power of two and z power of one (xx/z yyz) this is the desired intent. To correct when weighted members has been determined to be set incorrectly by sampling after "max" charge during charge cycle did not achieve a full charge after cycle completed and temperatures are within "target range" 
 *Zn is the unknown difference of the Z component when weighted members are not the same as expected. Recommend only using targeting when a new af_create_view is being made. Do not allow continuous monitoring.
