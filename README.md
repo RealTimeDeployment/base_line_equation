@@ -1,4 +1,4 @@
-# base_line_equation
+# base_line_equation *Reason for maintenance helper execution is actual < target plane-1 Never execute for actual to =>target plane-1 Use original members for reference
 This is a simple math & reference different equation for finding an unknown using the known. 
 Correction for variable undefined.
 The equation as used here is when two coeffecient members are proportiionally equal and one coefficent has an inverse relationship to one of the two proportionally equal coefficients.Depending on the target logY or  XY use of z3 or z4 equation is used. Note that without Z3,Z4 the calculation causes regression and Z3 causes growth to the x member when logY is desired. Use Z4 when coefficients xy are second order to remain equally proportional to each other and have inverse relationships to first order inverse  member.
