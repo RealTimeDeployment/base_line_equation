@@ -6,12 +6,13 @@ Desired (3)
 X proportional equal to y
 Y proportional equal to x
 Z Inverse to x
-X2 not=X1
-Z2(X2/Y1) ; Zn(Z1-Z2) ; Z3(Z1+Zn) ; Z4(Z1+(Zn/2)) \\ adjustable weighted members
+X2 not=X1 ; Y1(X1/Z1)*do not use 0.0-9.0 Use ohms law 
+Z2(X2/Y1) ; Zn(Z1-Z2)*difference ; Z3(Z1+Zn) ; Z4(Z1+(Zn/2)) \\ adjusted weighted members
 X3(Z3*Y1) ; X4(Z4*Y1) *if ZN unknown for expectedX<TargetX zn is positive number; if expectedX>TargetX Zn returns a negative number
-logY(X3\Z3) ; Y3(X4\Z3) depending on (logy xx\z) ; (xx\z yy\z)= proportional xy
-Return(X3,X4;Z3)
-( X3 ; X4 ); Z3>Target
-X3 ; Z3=Target *use X3 logY
-X4 ; Z3=Target *use x4 for coeffecients with power of two and z power of one
-*Zn is the unknown difference of the Z component when weighted members are not same as expected
+logYlog depending on what is being targeted to be found,(logy xx\z)unequal xy ; (xx\z yy\z)= proportional xy
+Return(X4;Z3)
+(X4;Z3) = new view only *do not use as new target or allow orginal target to change. Without limits to when calls are made and when adjustments are allowed will cause undesired behaviour
+X3 ; Z3=  *use X3 for logY only when amps is required to remain static for finding pool_available<needed
+X4 ; Z3=Target *use x4 for coefficients with power of two and z power of one
+*Zn is the unknown difference of the Z component when weighted members are not the same as expected. Recommend only using targeting when a new af_create_view is being made. Do not allow continuous monitoring.
+Only use when an error occurs with target not achieved. Use this only as a maintenance tool. If used as equation only works well for physics suite for finding unknown weights.
