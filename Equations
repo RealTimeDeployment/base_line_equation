@@ -1,17 +1,17 @@
 Joshua Haynes copyright 2017
 When weighted members are greater than expected and actual X is not equal to target X
-Target (1)
-Actual (2)
-Desired (3)
+Target #1
+Actual #2
+Desired #3 or #4
 X proportional equal to y
 Y proportional equal to x
 Z Inverse to x
-X2 not=X1 ; Y1(X1/Z1)*do not use 0.0-9.0 Use ohms law 
-Z2(X2/Y1) ; R0(Z1-Z2)*difference ; Z3(Z1+R0) *corrected; Z4(Z1+(R0/2))*corrected \\ adjusted weighted members
-X3(Z3*Y1) ; X4(Z4*Y1) *if ZN unknown for expectedX<TargetX zn is positive number; if expectedX>TargetX Zn returns a negative number
-X4 ; Z3 new view for baseline, Y3(X4/Z3) *X4,Y3,Z3 give us our baseline corrected overview proportional equal to original view, correcting for the original weighted members beimg set incorrectly for the current condition of actual device.
-X4;Z3 = new corrected view for maintenance to know what values are correct only *do not use as new target or allow orginal target to change. Without limits to when calls are made and when adjustments are allowed will cause undesired behaviour as heat loss will cause new view to become >plane-1 Reason for execution is actual has become < plane-1
-X3 ; Z3=  *use X3 for logY only when amps is required to remain static for finding pool_available<needed for logY this will increase X causing increase to watts and unequal xy this shpuld not be used with integration as it will cause errors use this for physics only as when used for continuous it will cause Z member to repeatedly rise on each added layer due to adjustment executing against heat loss
-X4 ; Z3=Target *use x4 for coefficients with power of two and z power of one (xx/z yyz) this is the desired intent. To correct when weighted members has been determined to be set incorrectly by sampling after "max" charge during charge cycle did not achieve a full charge after cycle completed and temperatures are within "target range" 
-*Zn is the unknown difference of the Z component when weighted members are not the same as expected. Recommend only using targeting when a new af_create_view is being made. Do not allow continuous monitoring.
-Only use when an error occurs with target not achieved. Use this only as a maintenance tool. If used as equation only it works well for physics suite for finding unknown weights. The bestbest practice is to use toto change charging strategy only once. There should be no need to continually need adjusting. This should only be needed when the state of health of memners has changed typically this would only occur after many cycles of user charging and discharging device. 
+X,#2 not=X,#1; Y,#1(X,#1/Z,#1)*do not use 0.0-9.0 Use ohms law 
+Z,#2(X,#2/Y,#1) ; R0(Z,#1-Z,#2)*difference ; Z,#3(Z,#1+R0) *corrected; Z,#4(Z,#1+(R0/2))*corrected \\ adjusted weighted members
+X,#3(Z,#3*Y,#1) ; X,#4(Z,#4*Y,#1) *if Z for expectedX<TargetX z_corrected is positive number; if expectedX>TargetX Z_corrected returns a negative number
+X,#4 ; Z,#3 new view for baseline, Y,#3(X,#4/Z#3)[ X,#4;Y,#3;Z,#3 ]give us our baseline corrected overview proportional to original view, correcting for the original weighted members being set incorrectly for the current condition of actual device.
+X,#4;Z,#3 = new corrected view for maintenance to know what values are correct only *do not use as new target or allow orginal target to change. Without limits to when calls are made and when adjustments are allowed will cause undesired behaviour as heat loss and gain will cause new view to become >plane-1 Reason for execution is actual has become < plane-1
+X,#3 ; Z,#3=  *use X,#3 for logY only when amps is required to remain static for finding pool_available<needed for logY this will increase X causing increase to watts and unequal xy this should not be used with integration as it will cause errors use this for physics only as when used for continuous it will cause Z member to repeatedly rise on each added layer due to adjustment executing against heat gain
+X,#4 ; Z,#3 adjusted Target *use x,#4 for coefficients with power of two and z power of one (xx/z yyz) this is the desired intent. To correct when weighted members has been determined to be set incorrectly by sampling after "max" charge cycle did not achieve a full charge after cycle completed and temperatures are within "target range" 
+*Z_corrected is the unknown difference of the Z component when weighted members are not the same as expected. Recommend only using targeting when a new _view is being made. Do not allow continuous monitoring. Remaininglevellayer should execute on original and not on copy. D poimterspoimters/arrays are supposed to be gauranteed to always be correct. Use beyond adjusting weighted members may not be needed.
+Only use when an error occurs with target not achieved. Use this only as a maintenance tool. If used as equation only it works well for physics suite for finding unknown weights. The best practice is to use only to change charging strategy once. There should be no need to continually need adjusting. This should only be needed when the state of health of memners has changed typically this would only occur after many cycles of user charging and discharging device. 
