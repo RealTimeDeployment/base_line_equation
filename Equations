@@ -6,7 +6,7 @@ Desired #3 or #4
 X proportional equal to y
 Y proportional equal to x
 Z Inverse to x
-X,#2 not=X,#1; Y,#1(X,#1/Z,#1)*do not use 0.0-9.0 Use ohms law 
+X,#2 not=X,#1; Y,#1(X,#1/Z,#1)*do not use 0.0-9.0 Use ohms law After the calculation has been made normal variable use should be able to be used with the new values. Reason for using constant at this stage is to prevent incorrect values being used for conversion.
 Z,#2(X,#2/Y,#1) ; R0(Z,#1-Z,#2)*difference ; Z,#3(Z,#1+R0) *corrected; Z,#4(Z,#1+(R0/2))*corrected \\ adjusted weighted members
 X,#3(Z,#3*Y,#1) ; X,#4(Z,#4*Y,#1) *if Z for expectedX<TargetX z_corrected is positive number; if expectedX>TargetX Z_corrected returns a negative number
 X,#4 ; Z,#3 new view for baseline, Y,#3(X,#4/Z#3)[ X,#4;Y,#3;Z,#3 ]give us our baseline corrected overview proportional to original view, correcting for the original weighted members being set incorrectly for the current condition of actual device.
