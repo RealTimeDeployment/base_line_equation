@@ -38,4 +38,17 @@ N()(√R0)
 Y()(X/Z)xn() 
 Xn for X#1>X#2 ()(X#1-X) for X#1<X#2 ()(X-X#1) \\*Xn is difference of original target from new target*//
 Yn for X#1>X#2 ()(Y-y#1) for X#1<X#2 ()(Y#1-Y) \\*Yn is difference of original target from new target*//
-make new X,Y,Z new target base element values, when manufacturer values are unavailable, incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis.
+make new X,Y,Z new target base element values, when manufacturer values are unavailable, i
+Incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis.
+For i(xy) 
+x(√XYZ)
+y(√XY\Z)
+It\t_max_learn complete\one pass to fast learn target
+For tensor Qt\t avg adjustment tensor_monitor_loss\t || it\t-it\t monitored loss for remaining level layers 
+for fine tune adjustments use tensor monitored loss after success with setting new template. 
+Use tensor monitor only from this point. When making adjustments with tensor use avg loss of montiored difference in cache "short term" and do not make adjustments against 
+Base setup by short term monitoring. After sampling of charge and discharge cycles short term have completed 100 cycle get avg long term adjustment from avg of the short term cycles.
+This is long term training, complete and a final adjustment for base values. This will avoid a single step process all at once for training causing ram over limit during training. 
+By monitoring the average of thhe sort term r0± and adding the final adjustments value to the initial ro± value. Monitor loss for remaining level layers will continue on tensor monitoring and will not effect base value again.
+Basic WiP setup options , constant current, low current, max current, todo : dynamic current linking strategies together and using regulator to change voltage and current by hz and duty cycle when needed for battery life or stability or performance. 
+Using an on demand performance strategy  with minimum current as initial priority but stability as greater priority and performance as strategy when needed. Desired effect is smooth transitioning from low to high and back to low voltage and amperage without stepping up and down but instead fine adjustment control.
