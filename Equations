@@ -33,7 +33,7 @@ Z#2(X#2/Y#1)
 Ro if X#1<X#2 -ro()(Z#2-Z#1) If X#1>X#2 +ro()(Z#1-Z#2)
 if X#1>X#2 +ro if X#1<X#2 -ro
 Z()(Z#1±Ro)
-X()(Y#1/(Z#1±N)) 
+X()(Y#1/(Z#1±(R0/2)) 
 N()(√R0)
 Y()(X/Z)xn() 
 Xn for X#1>X#2 ()(X#1-X) for X#1<X#2 ()(X-X#1) \\*Xn is difference of original target from new target*//
@@ -41,8 +41,8 @@ Yn for X#1>X#2 ()(Y-y#1) for X#1<X#2 ()(Y#1-Y) \\*Yn is difference of original t
 make new X,Y,Z new target base element values, when manufacturer values are unavailable, i
 Incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis.
 For i(xy) 
-x(√XYZ)
-y(√XY\Z)
+x(√iZ)* used with regulator for precision control of x & y in conjunction with thermal strategy towards on demand strategy.
+y(√i\Z)
 It\t_max_learn complete\one pass to fast learn target @ N
 For tensor Qt\t avg adjustment tensor_monitor_loss\t || it\t-it\t monitored loss for remaining level layers 
 for fine tune adjustments use tensor monitored loss after success with setting new template. 
