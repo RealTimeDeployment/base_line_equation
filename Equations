@@ -43,13 +43,13 @@ Incorrect, and tensor learning can not be performed, or for use in physics tests
 For i(xy) 
 x(√XYZ)
 y(√XY\Z)
-It\t_max_learn complete\one pass to fast learn target
+It\t_max_learn complete\one pass to fast learn target @ N
 For tensor Qt\t avg adjustment tensor_monitor_loss\t || it\t-it\t monitored loss for remaining level layers 
 for fine tune adjustments use tensor monitored loss after success with setting new template. 
 Use tensor monitor only from this point. When making adjustments with tensor use avg loss of montiored difference in cache "short term" and do not make adjustments against 
 Base setup by short term monitoring. After sampling of charge and discharge cycles short term have completed 100 cycle get avg long term adjustment from avg of the short term cycles.
 This is long term training, complete and a final adjustment for base values. This will avoid a single step process all at once for training causing ram over limit during training. 
-By monitoring the average of thhe sort term r0± and adding the final adjustments value to the initial ro± value. Monitor loss for remaining level layers will continue on tensor monitoring and will not effect base value again.
+By monitoring the average of the short term N± difference to N and adding the final adjustments value to the initial N± value. Monitor loss for remaining level layers will continue on tensor monitoring and will not effect base value again.
 Basic WiP setup options , constant current, low current, max current, todo : dynamic current linking strategies together and using regulator to change voltage and current by hz and duty cycle when needed for battery life or stability or performance. 
 Using an on demand performance strategy  with minimum current as initial priority but stability as greater priority and performance as strategy when needed. Desired effect is smooth transitioning from low to high and back to low voltage and amperage without stepping up and down but instead fine adjustment control.
 for In (convX*convY) short term adjustment In ++ -- using difference to In at known-good level when tensor monitored I<expected I or I>expected I different In>In expected or different In<In expected *working values*calculate In difference by XnYnZn #1 different to XnYnZn #2 actual for difference In#1 to In#2 and Zn#2* for Zn#2 working is equal to thermal and is sent to thermal management for pmu to manage heat protection strategies greater priority than increase to In ++ 
