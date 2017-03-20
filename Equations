@@ -52,3 +52,6 @@ This is long term training, complete and a final adjustment for base values. Thi
 By monitoring the average of thhe sort term r0± and adding the final adjustments value to the initial ro± value. Monitor loss for remaining level layers will continue on tensor monitoring and will not effect base value again.
 Basic WiP setup options , constant current, low current, max current, todo : dynamic current linking strategies together and using regulator to change voltage and current by hz and duty cycle when needed for battery life or stability or performance. 
 Using an on demand performance strategy  with minimum current as initial priority but stability as greater priority and performance as strategy when needed. Desired effect is smooth transitioning from low to high and back to low voltage and amperage without stepping up and down but instead fine adjustment control.
+for In (convX*convY)
+convX (√XnYnZn) convYn (√XnYn/Zn)
+For live adjustment Zn=(thermal unit++) **Always** monitor heat and limit In due to thermal unit increasing Set max limit to In by Thermal max and decrease In to I_max or below I_max for thermal protection.  On PMU by V pwm regulator Hz & Duty cycle on off @ % as X and Y are governed by regulator Hz&cycle%
