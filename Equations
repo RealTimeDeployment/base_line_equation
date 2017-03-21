@@ -1,4 +1,4 @@
-/*When weighted members are greater than expected and actual X is not equal to target X
+Joshua Haynes February 2017 copyright licensing under Apache 2.0 /*When weighted members are greater than expected and actual X is not equal to target X
 Target #1
 Actual #2
 Desired #3
@@ -28,18 +28,19 @@ If X#1>X#2 max+ if X#1<#2 max-
 for [X,Y,Z,R0]max±
 Y#1(X#1/Z#1)
 Z#2(X#2/Y#1)
-Ro if X#1<X#2 -ro()(Z#2-Z#1) If X#1>X#2 +ro()(Z#1-Z#2)
-if X#1>X#2 +ro if X#1<X#2 -ro
+Ro * if X#1<X#2 -Ro()(Z#2-Z#1) If X#1>X#2 +Ro()(Z#1-Z#2)
+if X#1>X#2 +Ro if X#1<X#2 -Ro
 Z()(Z#1±Ro)
 X()(Y#1/(Z#1±(R0/2))
-Y()(X/Z)xn() 
+
+Y()(X/Z)Xn() 
 Xn for X#1>X#2 ()(X#1-X) for X#1<X#2 ()(X-X#1) \\*Xn is difference of original target from new target*//
 Yn for X#1>X#2 ()(Y-y#1) for X#1<X#2 ()(Y#1-Y) \\*Yn is difference of original target from new target*//
 make new X,Y,Z new target base element values, when manufacturer values are unavailable, i
 Incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis.
 For power in joules P=x*y,x*x/z,y*y*z
-x(√x/Z)* used with regulator for precision control of x & y in conjunction with thermal strategy towards on demand strategy.
-y(√y*Z)
+x(xx/z)* used with regulator for precision control of x & y in conjunction with thermal strategy towards on demand strategy.
+y(yy*z)
 It\t_max_learn complete\one pass to fast learn target @ N
 For tensor Qt\t avg adjustment tensor_monitor_loss\t || it\t-it\t monitored loss for remaining level layers 
 for fine tune adjustments use tensor monitored loss after success with setting new template. 
