@@ -1,4 +1,3 @@
-Joshua Haynes copyright February 2017 
 /*When weighted members are greater than expected and actual X is not equal to target X
 Target #1
 Actual #2
@@ -33,8 +32,7 @@ Z#2(X#2/Y#1)
 Ro if X#1<X#2 -ro()(Z#2-Z#1) If X#1>X#2 +ro()(Z#1-Z#2)
 if X#1>X#2 +ro if X#1<X#2 -ro
 Z()(Z#1±Ro)
-X()(Y#1/(Z#1±(R0/2)) 
-N()(√R0)?? Unsure of step time to study ;)
+X()(Y#1/(Z#1±(R0/2))
 Y()(X/Z)xn() 
 Xn for X#1>X#2 ()(X#1-X) for X#1<X#2 ()(X-X#1) \\*Xn is difference of original target from new target*//
 Yn for X#1>X#2 ()(Y-y#1) for X#1<X#2 ()(Y#1-Y) \\*Yn is difference of original target from new target*//
@@ -52,10 +50,8 @@ This is long term training, complete and a final adjustment for base values. Thi
 By monitoring the average of the short term N± difference to N and adding the final adjustments value to the initial N± value. Monitor loss for remaining level layers will continue on tensor monitoring and will not effect base value again.
 the basic options , constant current, low current, max current, todo : dynamic current linking strategies together and using regulator to change voltage and current by hz and duty cycle when needed for battery life or stability or performance or thermal protection.
 Using an on demand performance strategy  with minimum current as initial priority but stability as a high priority and performance as strategy when needed. Desired effect is smooth transitioning from low to high and back to low voltage and amperage without stepping up and down but instead fine adjustment control.
-for In (convX*convY) short term adjustment In ++ -- using difference to In at known-good level when tensor monitored I<expected I or I>expected I different In>In expected or different In<In expected *working values*calculate In difference by XnYnZn #1 different to XnYnZn #2 actual for difference In#1 to In#2 and Zn#2* for Zn#2 working is equal to thermal and is sent to thermal management for pmu to manage heat protection strategies greater priority than increase to In ++  rather with Zn++ while working which is heat decrease current strategy as increased resistancewill continue to build heat with increased current to base as i max continues to increase equivalently. Need a good working strategy. 
-convX ((√XnXn)/Zn) convYn ((√YnYn)Zn) ?? Unsure of proper use here time to study ;)
+for In (convX*convY) short term adjustment In ++ -- using difference to In at known-good level when tensor monitored I<expected I or I>expected I different In>In expected or different In<In expected *working values*calculate In difference by XnYnZn #1 different to XnYnZn #2 actual for difference In#1 to In#2 and Zn#2* for Zn#2 working is equal to thermal and is sent to thermal management for pmu to manage heat protection strategies greater priority than increase to In ++  rather with Zn++ while working which is heat decrease current strategy as increased resistancewill continue to build heat with increased current to base as i max continues to increase equivalently. Need a good working strategy.
 For live adjustment working nominal Zn++=(thermal unit++) **Always** monitor heat and limit In++ due to thermal unit increasing Set max limit to In by Thermal max and decrease In to I_max or below I_max for thermal protection. As In++ nominal management>In @ Zn must be learned todo Build a learned thermal model from In++-- @x°c across thermal spectrum min--> max x°c for In working strategy using PMU by pwm regulator Hz & Duty cycle on off @ % as X and Y are governed by regulator Hz&cycle%
 Todo Build thermal monitor model by difference of Zn ++-- to Zn of learned Z@N as Z is learned @ tensor low temps with only a single preheat stage 
 As working temperatures increase above preheat stage requires thermal management to protect hardware from excessive heat failures caused by Zn++ increasing In ++ causing introduction of thermal excessive amount will be created impacting performance and hardware life span.
-Managment of heat is crucial.4d modeling a lofty goal not supported as in this concept would break linearity as defined by 3d modelling. Great question while this cause excessive global calls. Predefined min max avg. would probably be a good starting point with the first pass to execute offset of embedded value from gcc to "known good". Thought of cache to long term memory might be possible with the dynamic mem map available now. Concern of using ram to max is concern especially on systems with very little memory available. My tablet for example only has 2gb of ram but has 4gb of memory partitioned.
-How much free space is remaining is uncertain as it is not visible without digging deep into system. Will it be to "expensive"? 
+SuperceededSuperceeded
