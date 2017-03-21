@@ -21,26 +21,24 @@ Temp i_max <target i max==temp_i_max_plane <target_i_max_plane-1 && total Qt/t m
 For word byte alignment issues use delta and align from first byte, if it will allow for alignments to correct issue*∆supposed to be delta or the difference of* found that if byte size chunks are less than 16 causes issues recommend 32bit chunks//. Another thought was for performance could the test be done without a need for off_max/on training cudnn as tensorflow repeat has now done, if this equation style was used? Could this allow cpu clock count and current net induced to be calculated by spreading the work across a heterogeneous architecture, if this is possible use gpu for performing the equation? Ram already has figures loaded and gpu could handle it faster than cpu. What will be best for stability and performance? Only need to fix the regression.
 GCC call for characterization allows offloading and in turn is helpful to performance.
 Looking at the different possible approaches and which will have the least adverse impact,is the arm option better? *\\
-X#1_max≠X#2_max when X#2_max*after_cycle_end**//
-for PIP X#2_max# if X#1=X2 PIP correct,end
-if X#1≠X#2 [X,Y,Z,R0,Zn,Xn,Yn,N]max± /*Cache_long term memory*//
-If X#1>X#2 max+ if X#1<#2 max- 
+X#2_max≠X#1_max when X#2_max*after_cycle_end**//
+for PIP X#2_max# if X#2=X#1 PIP correct,end
+if X#2≠X#1 [X,Y,Z,R0]max± /*Cache_long term memory
 for [X,Y,Z,R0]max±
 Y#1(X#1/Z#1)
 Z#2(X#2/Y#1)
-Ro * if X#1<X#2 -Ro()(Z#2-Z#1) If X#1>X#2 +Ro()(Z#1-Z#2)
-if X#1>X#2 +Ro if X#1<X#2 -Ro
-Z()(Z#1±Ro)
-X()(Y#1/(Z#1±(R0/2))
-
+Ro for X#2>X#1 -Ro(-R0,(Z#1-Z#2) for X#2<X#1 +Ro(+R0,(Z#1-Z#2)
+Z()(Z#1±Ro) 
+X()(Y#1/(Z#1±(R0/2)
+N()(R0/2)
 Y()(X/Z)Xn() 
-Xn for X#1>X#2 ()(X#1-X) for X#1<X#2 ()(X-X#1) \\*Xn is difference of original target from new target*//
-Yn for X#1>X#2 ()(Y-y#1) for X#1<X#2 ()(Y#1-Y) \\*Yn is difference of original target from new target*//
+Xn for X#2>X --Xn()(--Xn,X#2-X) for X#2<X ++Xn()(++Xn,X-X#2)\\*Xn is difference of actual from target*//
+Yn for Y#2>Y --Yn()(Y-y#1) for ++Y()(Y#1-Y) \\*Yn is difference of actual from target*//
 make new X,Y,Z new target base element values, when manufacturer values are unavailable, i
 Incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis.
-For power in joules P=x*y,x*x/z,y*y*z
+For power in watts P=x*y,x*x/z,y*y*z
 x(xx/z)* used with regulator for precision control of x & y in conjunction with thermal strategy towards on demand strategy.
-y(yy*z)
+y(yyz)
 It\t_max_learn complete\one pass to fast learn target @ N
 For tensor Qt\t avg adjustment tensor_monitor_loss\t || it\t-it\t monitored loss for remaining level layers 
 for fine tune adjustments use tensor monitored loss after success with setting new template. 
@@ -54,4 +52,4 @@ for In (convX*convY) short term adjustment In ++ -- using difference to In at kn
 For live adjustment working nominal Zn++=(thermal unit++) **Always** monitor heat and limit In++ due to thermal unit increasing Set max limit to In by Thermal max and decrease In to I_max or below I_max for thermal protection. As In++ nominal management>In @ Zn must be learned todo Build a learned thermal model from In++-- @x°c across thermal spectrum min--> max x°c for In working strategy using PMU by pwm regulator Hz & Duty cycle on off @ % as X and Y are governed by regulator Hz&cycle%
 Todo Build thermal monitor model by difference of Zn ++-- to Zn of learned Z@N as Z is learned @ tensor low temps with only a single preheat stage 
 As working temperatures increase above preheat stage requires thermal management to protect hardware from excessive heat failures caused by Zn++ increasing In ++ causing introduction of thermal excessive amount will be created impacting performance and hardware life span.
-SuperceededSuperceeded
+S
