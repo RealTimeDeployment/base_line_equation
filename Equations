@@ -23,22 +23,26 @@ GCC call for characterization allows offloading and in turn is helpful to perfor
 Looking at the different possible approaches and which will have the least adverse impact,is the arm option better? *\\
 X#2_max≠X#1_max when X#2_max*after_cycle_end**//
 for PIP X#2_max# if X#2=X#1 PIP correct,end
-if X#2≠X#1 [X,Y,Z,R0]max± /*Cache_long term memory
-for [X,Y,Z,R0]max±
+if X#2≠X#1 [X,Y,Z,R0,i]max± /*Cache_long term memory
+for [X,Y,Z,R0,N]max±
 Y#1(X#1/Z#1)
 Z#2(X#2/Y#1)
-Ro for X#2>X#1 -Ro(-R0,(Z#1-Z#2) for X#2<X#1 +Ro(+R0,(Z#1-Z#2)
+Ro for X#2>X#1 -Ro(-R0,(Z#1-Z#2) for X#2<X#1 +Ro(+R0,(Z#2-Z#1)
 Z()(Z#1±Ro) 
-X()(Y#1/(Z#1±(R0/2)
-N()(R0/2)
-Y()(X/Z)Xn() 
-Xn for X#2>X --Xn()(--Xn,X#2-X) for X#2<X ++Xn()(++Xn,X-X#2)\\*Xn is difference of actual from target*//
-Yn for Y#2>Y --Yn()(Y-y#1) for ++Y()(Y#1-Y) \\*Yn is difference of actual from target*//
+X()(Y#1/(Z#1±(R0/2))
+Y()(X/Z)set new object elements [X,Y,Z] i=XY
+**N for(X2<X)N+ (N+,Xn+()(X-X2),R0+(R0+,Z-Z2), solve Y from new X/Z
+for(X2>X)N- (N-,Xn-()(X2-X),R0-(R0-,Z2-Z), solve Y from new X/Z
+))todo incomplete or incorrect?**
+for i actual<i target N+ for i actual>i target N-
+When object has already been learned and requires additional adjustment we are again looking at a change to weighted members 
+At this stage it will be a small adjustment X#2_max<X#1_max target ++max (++max, X++Xn, Y++Yn, Z++Zn) for X#2 for X#2>X --max (--max, X--Xn,Y--Yn,Z--Zn) Actually do mean add or subtract difference
+When controlling elements of -c need fine adjustment during working conditions
+x*(√X) for X#2>X --x()(--x,X#2-X) for X#2<X ++x()(++x,X-X#2)\\*x is difference of actual from target at √ making it power of one*//
+y*(√Y) for Y#2>Y --y()(--y,Y-Y#2) forY#2<Y  ++y()(++y,Y#2-Y)\\*y is difference of actual from target at √ making it power of one*//
+This requires the √Z as Z is originally already power of one\\ for constant current.
 make new X,Y,Z new target base element values, when manufacturer values are unavailable, i
-Incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis.
-For power in watts P=x*y,x*x/z,y*y*z
-x(xx/z)* used with regulator for precision control of x & y in conjunction with thermal strategy towards on demand strategy.
-y(yyz)
+Incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis
 It\t_max_learn complete\one pass to fast learn target @ N
 For tensor Qt\t avg adjustment tensor_monitor_loss\t || it\t-it\t monitored loss for remaining level layers 
 for fine tune adjustments use tensor monitored loss after success with setting new template. 
