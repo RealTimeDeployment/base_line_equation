@@ -43,8 +43,8 @@ Temp_i_max=target_i_max R0=0
 else
 Temp_i_max≠target_i_max <i_max±>
 if i_max± 
-Xb≠Xa max±[i,X,Y,Z,R0]
-max±
+Xb≠Xa c[i,X,Y,Z,R0]
+c
 [
 Ya()(Xa/Za)
 Zb()(Xb/Ya)
