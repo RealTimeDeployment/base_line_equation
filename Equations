@@ -24,8 +24,7 @@ XY = W, i=it/t where t is time. induced current is equal to the total induced cu
 When current strategy is not a constant current rate for the full duration of charge cycle the rate of charge is not constant. If an incorrect calculation is being used to set target then incorrect charging strategy or current induction may be used.
 By using a training session and resolving for any attribute variables that could not otherwise have been defined, characterizing the undefined difference allows for improvement
 
-//A new avg charge strategy to help the total induced current is needed so that the avg current induced over time will result in temp X_max=target X_max//
-Optim
+//A new avg charge strategy to help the total induced current is needed so that the avg current induced over time will result in temp X_max=target X_max/
 
 X volts
 Y amperage
