@@ -38,7 +38,7 @@ c new_target
 
 
 if 
-Temp_i_max=target_i_max R0=0
+Temp_i_max=target_i_max==R0=0
 else
 Temp_i_max≠target_i_max <i_max±>
 if i_max± 
@@ -47,9 +47,9 @@ max±
 [
 Ya()(Xa/Za)
 Zb()(Xb/Ya)
-Ro()(Za-Zb)
+R0()(Za-Zb)
 
-if Xb=Xa -0
+if Xb=Xa R0=0
 if Xb>Xa -R0
 else Xb<Xa +R0
 
@@ -58,4 +58,4 @@ X()(Ya/(Za±(R0/2))
 Y()(X/Z)
 i()(XY)
 ]
-fi
+
