@@ -39,7 +39,7 @@ c new_target
 
 
 if 
-Temp_i_max=target_i_max -0
+Temp_i_max=target_i_max R0=0
 else
 Temp_i_max≠target_i_max <i_max±>
 if i_max± 
