@@ -1,59 +1,62 @@
 Joshua Haynes February 2017 copyright licensing under Apache 2.0 /*When weighted members are greater than expected and actual X is not equal to target X
-Target #1
-Actual #2
-Desired #3
-X proportional equal to y
-Y proportional equal to x
-Z Inverse to x ;; Y proportion to z
-X,#2 not=X,#1; Y,#1(X,#1/Z,#1)*do not use 0.0-9.0 Use ohms law After the calculation has been made normal variable use should be able to be used with the new values. Reason for using constant at this stage is to prevent incorrect values being used for conversion.
-Z,#2(X,#2/Y,#1) ; R0(Z,#1-Z,#2)*difference ; Z=(Z,#1+R0) *corrected Z weighted members; Z,#4(Z,#1+(R0/2))*used for finding X correctly \\ adjusted weighted members
-X(Z,#4*Y,#1) *if Z for expectedX<TargetX z_corrected is positive number; if expectedX>TargetX Z_corrected returns a negative number
-X ; Z new view for baseline, Y=(X/Z)[ X;Y;Z ]give us our baseline corrected overview proportional to original view, correcting for the original weighted members being set incorrectly for the current condition of actual device.
+Ohms law and reference difference allows using the know good values to find the difference from the expected results.
+After determing the difference we can estimate the undefined loss or difference from what was predefined.
+Using ohms law and reference difference together we can redefine the values to be much more accurately calculated and now are known to be good.
+
+X proportional to Y
+Y proportional to X
+Z Inverse to X
+Y proportion to Z
+Temp ≠ target; for temp,Y *do not use 0.0-9.0 Use ohms law After the calculation has been made normal variable use should be able to be used with the new values. 
+Reason for using constant at this stage is to prevent incorrect values being used for characterization
+
+if Z for tempX<targetX z_corrected is positive number; if tempX>TargetX Z_corrected returns a negative number
+new view for baseline, [ X;Y;Z ]give us our baseline corrected view equivalent to original view, correcting for the original weighted members being set incorrectly for the current condition of actual device.
 Without limits to when calls are made and when adjustments are allowed will cause undesired behaviour as heat loss and gain will cause new view to become >plane-1 Reason for execution is actual has become < plane-1
 coefficients with power of two and z power of one (xx/z yyz) this is the desired intent. To correct when weighted members has been determined to be set incorrectly by sampling after "max" charge cycle did not achieve a full charge after cycle completed and temperatures are within "target range" 
-Recommend only using targeting when a new _view is being made. Do not allow continuous monitoring. Remaining_level_layer should execute on original and not on copy. D pointers/arrays are supposed to be gauranteed to always be correct. Use beyond adjusting weighted members may not be needed.
-Only use when an error occurs with target not achieved. Use this only as a maintenance tool. If used as equation only it works well for physics suite for finding unknown weights. The best practice is to use only to change charging strategy once. There should be no need to continually need adjusting. This should only be needed when the state of health of memners has changed typically this would only occur after many cycles of user charging and discharging device. 
-Rule is to follow proper utf8, XY = W, i*it/t where t is time. To say that induced current is equal to the total induced current over time-current loss over time/net induced current or i=Qt/t where Q is current or the net current induced over time equally dependent on the avg current induced over time, as when currentt strategy is not a constant current rate for the full duration of charge cycle or because of an incorrect calculation being used to set target up to begin with.
+Recommend only using targeting when a new _view is being made. Do not allow continuous monitoring causes race condition. 
+Remaining_level_layer should execute on original and not on copy.
+Only use when an error occurs with target not achieved.
+Use this only as a maintenance tool.
+Always set a max limit for allowed "expansion" as with no limits variables grow to infinity.
+If used as equation only it works well for physics suite for finding unknown weights.
+XY = W, i=it/t where t is time. induced current is equal to the total induced current over time <-current loss over time=net induced current or i=Qt/t where Q is net current induced over time equally dependent on the avg current induced over time.
+When current strategy is not a constant current rate for the full duration of charge cycle the rate of charge is not constant. If an incorrect calculation is being used to set target then incorrect charging strategy or current induction may be used.
+By using a training session and resolving for any attribute variables that could not otherwise have been defined, characterizing the undefined difference allows for improvement
+
 //A new avg charge strategy to help the total induced current is needed so that the avg current induced over time will result in temp X_max=target X_max//
-Optimized_Qt/t} *some changes have been made to update strategy and have not been tested yet to verify calculations are correct Most of the work here is now as of March 2017 no longer needed as Master version released beta seq2seq and most of the desired behavior has been implemented in that release. These simple equations allow the use of various strategies to look at different parts of the value when they are changed. Added nominal and working strategies and ✓equations as attempts for more accurate results and finer tuning.
-//induction std_complete &&
-Temp i_max <target i max==temp_i_max_plane <target_i_max_plane-1 && total Qt/t max <target total Qt/t max|| avgQ/t arg (Temp i qt/t < target i qt/t)||new_ total Qt/t_max(temp total Qt/t max+(difference of the temp Qt/t< than target Qt/t)&&target Qt/t_max==new_total Qt/t max && == to a new target i_plane-1 equivalent to the original plane-1 Todo: make avg induced current increase actual Qt/t = new total Qt/t by calculating the induced current per second rate of the new total desired current rate.
-For word byte alignment issues use delta and align from first byte, if it will allow for alignments to correct issue*∆supposed to be delta or the difference of* found that if byte size chunks are less than 16 causes issues recommend 32bit chunks//. Another thought was for performance could the test be done without a need for off_max/on training cudnn as tensorflow repeat has now done, if this equation style was used? Could this allow cpu clock count and current net induced to be calculated by spreading the work across a heterogeneous architecture, if this is possible use gpu for performing the equation? Ram already has figures loaded and gpu could handle it faster than cpu. What will be best for stability and performance? Only need to fix the regression.
-GCC call for characterization allows offloading and in turn is helpful to performance.
-Looking at the different possible approaches and which will have the least adverse impact,is the arm option better? *\\
-X#2_max≠X#1_max when X#2_max*after_cycle_end**//
-for PIP X#2_max# if X#2=X#1 PIP correct,end
-if X#2≠X#1 [X,Y,Z,R0,i]max± /*Cache_long term memory
-for [X,Y,Z,R0,N]max±
-Y#1(X#1/Z#1)
-Z#2(X#2/Y#1)
-Ro for X#2>X#1 -Ro(-R0,(Z#1-Z#2) for X#2<X#1 +Ro(+R0,(Z#2-Z#1)
-Z()(Z#1±Ro) 
-X()(Y#1/(Z#1±(R0/2))
-Y()(X/Z)set new object elements [X,Y,Z] i=XY
-**N for(X2<X)N+ (N+,Xn+()(X-X2),R0+(R0+,Z-Z2), solve Y from new X/Z
-for(X2>X)N- (N-,Xn-()(X2-X),R0-(R0-,Z2-Z), solve Y from new X/Z
-))todo incomplete or incorrect?**
-for i actual<i target N+ for i actual>i target N-
-When object has already been learned and requires additional adjustment we are again looking at a change to weighted members 
-At this stage it will be a small adjustment X#2_max<X#1_max target ++max (++max, X++Xn, Y++Yn, Z++Zn) for X#2 for X#2>X --max (--max, X--Xn,Y--Yn,Z--Zn) Actually do mean add or subtract difference
-When controlling elements of -c need fine adjustment during working conditions
-x*(√X) for X#2>X --x()(--x,X#2-X) for X#2<X ++x()(++x,X-X#2)\\*x is difference of actual from target at √ making it power of one*//
-y*(√Y) for Y#2>Y --y()(--y,Y-Y#2) forY#2<Y  ++y()(++y,Y#2-Y)\\*y is difference of actual from target at √ making it power of one*//
-This requires the √Z as Z is originally already power of one\\ for constant current.
-make new X,Y,Z new target base element values, when manufacturer values are unavailable, i
-Incorrect, and tensor learning can not be performed, or for use in physics tests, option to return many variables for comparison analysis
-It\t_max_learn complete\one pass to fast learn target @ N
-For tensor Qt\t avg adjustment tensor_monitor_loss\t || it\t-it\t monitored loss for remaining level layers 
-for fine tune adjustments use tensor monitored loss after success with setting new template. 
-Use tensor monitor only from this point. When making adjustments with tensor use avg loss of montiored difference in cache "short term" and do not make adjustments against 
-Base setup by short term monitoring. After sampling of charge and discharge cycles short term have completed 100? cycle get avg long term adjustment from avg of the short term cycles. Min max avg
-This is long term training, complete and a final adjustment for base values. This will avoid a single step process all at once for training causing ram over limit during training. But concerns of using ram for the process are also a concern and another option is probably a good idea. Also not a fan of constamt gcc calls.
-By monitoring the average of the short term N± difference to N and adding the final adjustments value to the initial N± value. Monitor loss for remaining level layers will continue on tensor monitoring and will not effect base value again.
-the basic options , constant current, low current, max current, todo : dynamic current linking strategies together and using regulator to change voltage and current by hz and duty cycle when needed for battery life or stability or performance or thermal protection.
-Using an on demand performance strategy  with minimum current as initial priority but stability as a high priority and performance as strategy when needed. Desired effect is smooth transitioning from low to high and back to low voltage and amperage without stepping up and down but instead fine adjustment control.
-for In (convX*convY) short term adjustment In ++ -- using difference to In at known-good level when tensor monitored I<expected I or I>expected I different In>In expected or different In<In expected *working values*calculate In difference by XnYnZn #1 different to XnYnZn #2 actual for difference In#1 to In#2 and Zn#2* for Zn#2 working is equal to thermal and is sent to thermal management for pmu to manage heat protection strategies greater priority than increase to In ++  rather with Zn++ while working which is heat decrease current strategy as increased resistancewill continue to build heat with increased current to base as i max continues to increase equivalently. Need a good working strategy.
-For live adjustment working nominal Zn++=(thermal unit++) **Always** monitor heat and limit In++ due to thermal unit increasing Set max limit to In by Thermal max and decrease In to I_max or below I_max for thermal protection. As In++ nominal management>In @ Zn must be learned todo Build a learned thermal model from In++-- @x°c across thermal spectrum min--> max x°c for In working strategy using PMU by pwm regulator Hz & Duty cycle on off @ % as X and Y are governed by regulator Hz&cycle%
-Todo Build thermal monitor model by difference of Zn ++-- to Zn of learned Z@N as Z is learned @ tensor low temps with only a single preheat stage 
-As working temperatures increase above preheat stage requires thermal management to protect hardware from excessive heat failures caused by Zn++ increasing In ++ causing introduction of thermal excessive amount will be created impacting performance and hardware life span.
-S
+Optim
+
+X volts
+Y amperage
+Z weighted members
+R0 undefined weighted members
+i watts
+
+a target 
+b Temp
+c new_target
+
+
+if 
+Temp_i_max=target_i_max -0
+else
+Temp_i_max≠target_i_max <i_max±>
+if i_max± 
+Xb≠Xa max±[i,X,Y,Z,R0]
+max±
+[
+Ya()(Xa/Za)
+Zb()(Xb/Ya)
+Ro()(Za-Zb)
+
+if Xb=Xa -0
+if Xb>Xa -R0
+else Xb<Xa +R0
+
+Z()(Za±R0) 
+X()(Ya/(Za±(R0/2))
+Y()(X/Z)
+i()(XY)
+]
+fi
