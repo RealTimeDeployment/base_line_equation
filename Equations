@@ -22,10 +22,15 @@ Always set a max limit for allowed "expansion" as with no limits variables grow 
 If used as equation only it works well for physics suite for finding unknown weights.
 XY = W, i=it/t where t is time. induced current is equal to the total induced current over time <-current loss over time=net induced current or i=Qt/t where Q is net current induced over time equally dependent on the avg current induced over time.
 When current strategy is not a constant current rate for the full duration of charge cycle the rate of charge is not constant. If an incorrect calculation is being used to set target then incorrect charging strategy or current induction may be used.
-By using a training session and resolving for any attribute variables that could not otherwise have been defined, characterizing the undefined difference allows for improvement
+By using a training session and resolving for any attribute variables that could not otherwise have been defined, characterizing the undefined difference allows for improvement. This can not be achieved without defined variables of original target. 
+As a op kernel this method has been depreciated. Best Splits for Temp is not supported to be passed to user space and back to loader layer. However completing pass after charge complete gives new_i_max target "max limit" for -1. If cached at this stage as new GCC profile.
+This would add a step for user before update charge device. Updating/Device/Attributes/GCC receive attribute/GCC update device profile/GCC update device.
+Or google services could send device attributes periodically preventing any security concerns as no call would be required to be made to loader layer.Would be a small addition to the numerous data collection calls google already runs in the background.
+and sent to GCC to update device profile characterization if that was possible? Then preconditioning might not be needed for initial "none" characterized attributes.? As attribute characterization is already completed. Only tensor training/ tensor loss monitoring and management would be required.
+Use GCC. **Rebasing** No kernel Text only**Although it did work and only requires a single pass to set target and never requires another pass. Management requires Tensorflow_loss_learn/Thermal strategy/Max offset limiting/This is only a subset Going full Nueral Network & MatMul
 
 //A new avg charge strategy to help the total induced current is needed so that the avg current induced over time will result in temp X_max=target X_max//
-Optim
+
 
 X volts
 Y amperage
@@ -42,9 +47,8 @@ if
 Temp_i_max=target_i_max b=a
 else
 Temp_i_max≠target_i_max -c
--c[i,X,Y,Z,R0]
--c
-[
+-c{i,X,Y,Z,R0}
+-c{
 Ya()(Xa/Za)
 Zb()(Xb/Ya)
 Ro()(Za-Zb)
@@ -56,5 +60,4 @@ Z()(Za±R0)
 X()(Ya/(Za±(R0/2))
 Y()(X/Z)
 i()(XY)
-]
-
+}
