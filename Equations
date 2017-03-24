@@ -51,7 +51,7 @@ i()(XY)}c
 _new_image/i/attributes
 Linearity of image @ X (root i*z) 
 Linearity of image @ Y (root i/z)
-Linearity of image inverse to Z (i/YY) && (i/XX)
+Linearity of image inverse to Z (i/YY) && (XX/i)
 Conv2d X (i/Y)
 Conv2d Y (i/X)
 Conv2d i (YYZ) && (XX/Z)
