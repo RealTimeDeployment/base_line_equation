@@ -38,24 +38,20 @@ c new_target
 
 
 if 
-Temp_i_max=target_i_max==R0=0
-else
-Temp_i_max≠target_i_max <i_max±>
-if i_max± 
-Xb≠Xa max±[i,X,Y,Z,R0]
-max±
-[
+Xb≠Xa c{i,X,Y,Z,R0}
+-c{
 Ya()(Xa/Za)
 Zb()(Xb/Ya)
-R0()(Za-Zb)
-
-if Xb=Xa R0=0
-if Xb>Xa -R0
-else Xb<Xa +R0
-
-Z()(Za±R0) 
-X()(Ya/(Za±(R0/2))
+R0()(Za-Zb)  *if xb<xa R0 will be + if xb>xa r0 will be -
+Z()(Za+R0) 
+X()(Ya(Za+(R0/2))
 Y()(X/Z)
-i()(XY)
-]
+i()(XY)}c
 
+_new_image/i/attributes
+Linearity of image @ X (root i*z) 
+Linearity of image @ Y (root i/z)
+Linearity of image inverse to Z (i/YY) && (i/XX)
+Conv2d X (i/Y)
+Conv2d Y (i/X)
+Conv2d i (YY/Z) && (XX/Z)
