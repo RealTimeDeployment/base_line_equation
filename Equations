@@ -1,4 +1,5 @@
-Joshua Haynes February 2017 copyright licensing under Apache 2.0 /*When weighted members are greater than expected and actual X is not equal to target X
+Joshua Haynes February 2017 copyright licensing under Apache 2.0 
+/*When weighted members are greater than expected and actual X is not equal to target X
 Ohms law and reference difference allows using the know good values to find the difference from the expected results.
 After determing the difference we can estimate the undefined loss or difference from what was predefined.
 Using ohms law and reference difference together we can redefine the values to be much more accurately calculated and now are known to be good.
@@ -23,11 +24,10 @@ If used as equation only it works well for physics suite for finding unknown wei
 XY = W, i=it/t where t is time. induced current is equal to the total induced current over time <-current loss over time=net induced current or i=Qt/t where Q is net current induced over time equally dependent on the avg current induced over time.
 When current strategy is not a constant current rate for the full duration of charge cycle the rate of charge is not constant. If an incorrect calculation is being used to set target then incorrect charging strategy or current induction may be used.
 By using a training session and resolving for any attribute variables that could not otherwise have been defined, characterizing the undefined difference allows for improvement
+A new avg charge strategy to help the total induced current is needed so that the avg current induced over time will result in temp X_max=target X_max*\
 
-//A new avg charge strategy to help the total induced current is needed so that the avg current induced over time will result in temp X_max=target X_max/
-
-X volts
-Y amperage
+X voltage
+Y amps
 Z weighted members
 R0 undefined weighted members
 i watts
@@ -42,22 +42,15 @@ Xb≠Xa c{i,X,Y,Z,R0}
 -c{
 Ya()(Xa/Za)
 Zb()(Xb/Ya)
-R0()(Za-Zb)  *if xb<xa R0 will be + if xb>xa r0 will be -
+R0()(Za-Zb)  *if xb<xa R0+ if xb>xa r0-
 Z()(Za+R0) 
 X()(Ya(Za+(R0/2))
 Y()(X/Z)
-i()(XY)}c
-
-_new_image/i/attributes/relationship to e!ements/pointing to image and showing non-linearity to image/track i as it/t
-for growth in weight to watt hours/element 
-behavior effect shape of image by height or width differently by actual value but total is still the same.Volume when we refactored to correct i due to increased z
-Elements move from image in these relationship manners as shown in the following/this is normal and correct.
-As image element height X increases == to(root i*z) 
-As image element width Y increases == to (root i/z)
-Z == (i/YY) && (XX/i) *equation corrects for this behavior."scope" axi z 0-1 and 1-0
-Shape will change for targeting different elements new equation reflecting the different intent target must be used such as 
-log y does not use /2 for X this will maintain shape but will cause expansion and fail tests. Please see changes in optimal readme. 
-Note i havent graphed it out as i havemt had the time.
-X == (i/Y)
-Y == (i/X) has relationship to each other
-i == (YYZ) && (XX/Z) scope of i 0-1 1-0 same as z as i is directedly effected by z when x or y changes as x and y are effected by z whem it changes
+i()(XY)}
+Filter
+±X == ±(root i*z) 
+±Y == ±(root i/z)
+±Z == ±(i/YY) && ±(XX/i)
+±X == ±(i/Y)
+±Y == ±(i/X)
+±i == ±(YYZ) && ±(XX/Z) 
