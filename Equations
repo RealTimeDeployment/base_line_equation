@@ -1,4 +1,5 @@
 Joshua Haynes February 2017 copyright licensing under Apache 2.0 
+Project Wrapper 
 /*When weighted members are greater than expected and actual X is not equal to target X
 Ohms law and reference difference allows using the know good values to find the difference from the expected results.
 After determing the difference we can estimate the undefined loss or difference from what was predefined.
@@ -47,11 +48,3 @@ Z()(Za+R0)
 X()(Ya(Za+(R0/2))
 Y()(X/Z)
 i()(XY)}
-±R0==()
-(±X == ±(root i*z) 
-±Y == ±(root i/z)
-±Z == ±(i/YY) && ±(XX/i)
-±X == ±(i/Y)
-±Y == ±(i/X)
-±i == ±(YYZ) && ±(XX/Z)
-)
