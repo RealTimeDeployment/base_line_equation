@@ -48,10 +48,16 @@ X()(Ya(Za+(R0/2))
 Y()(X/Z)
 i()(XY)}c
 
-_new_image/i/attributes
-Linearity of image @ X (root i*z) 
-Linearity of image @ Y (root i/z)
-Linearity of image inverse to Z (i/YY) && (XX/i)
-Conv2d X (i/Y)
-Conv2d Y (i/X)
-Conv2d i (YYZ) && (XX/Z)
+_new_image/i/attributes/relationship to e!ements/pointing to image and showing non-linearity to image/track i as it/t
+for growth in weight to watt hours/element 
+behavior effect shape of image by height or width differently by actual value but total is still the same.Volume when we refactored to correct i due to increased z
+Elements move from image in these relationship manners as shown in the following/this is normal and correct.
+As image element height X increases == to(root i*z) 
+As image element width Y increases == to (root i/z)
+Z == (i/YY) && (XX/i) *equation corrects for this behavior."scope" axi z 0-1 and 1-0
+Shape will change for targeting different elements new equation reflecting the different intent target must be used such as 
+log y does not use /2 for X this will maintain shape but will cause expansion and fail tests. Please see changes in optimal readme. 
+Note i havent graphed it out as i havemt had the time.
+X == (i/Y)
+Y == (i/X) has relationship to each other
+i == (YYZ) && (XX/Z) scope of i 0-1 1-0 same as z as i is directedly effected by z when x or y changes as x and y are effected by z whem it changes
